@@ -8,19 +8,11 @@
   <name>simplemaven</name>
   <url>http://maven.apache.org</url>
 
-<<<<<<< HEAD
    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
    </properties>
-=======
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-  </properties>
->>>>>>> 2a8c932adb537b7e56a17c19de91784c76f52f47
 
   <dependencies>
     <dependency>
