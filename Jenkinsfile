@@ -27,13 +27,13 @@ pipeline {
                 fingerprint 'target/*.jar'
             }
         } 
-       stage('Notify'){
+     /*  stage('Notify'){
             steps {
                 mail bcc: '', body: '''Please check the build "maven project" in Jenkins.
 
 Team Jenkins''', cc: '', from: '', replyTo: '', subject: 'Build has failed.Please check', to: 'sai7devops@gmail.com'
             }
-        } 
+        }*/ 
              
     }
 
