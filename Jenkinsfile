@@ -26,6 +26,11 @@ pipeline {
             steps {
                 fingerprint 'target/*.jar'
             }
+        }
+        stage('Convert XML to HTML'){
+            steps {
+                junit 'target/surefire-reports/Test-*.xml'
+            }
         } 
      /*  stage('Notify'){
             steps {
