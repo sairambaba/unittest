@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Convert XML to HTML'){
             steps {
-                junit 'target/surefire-reports/Test-*.xml'
+                junit 'target/surefire-reports/TEST-*.xml'
             }
         } 
      /*  stage('Notify'){
