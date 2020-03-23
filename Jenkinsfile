@@ -32,14 +32,14 @@ pipeline {
                 junit 'target/surefire-reports/TEST-*.xml'
             }
         }
-        stage('copy to jar file in to deployenvironment'){
+        stage('copy to jar file in to devenvironment'){
             steps {
-                sh'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62:/home/ubuntu'
+                sh 'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62:/home/ubuntu'
             }
         }
-        stage('run the jar file in deployenvironment'){
+        stage('run the jar file in devenvironment'){
             steps {
-                sh'ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.62 java -jar /home/ubuntu/*.jar'
+                sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.44.62 java -jar /home/ubuntu/*.jar'
             }
         } 
    
