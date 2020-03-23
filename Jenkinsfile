@@ -39,7 +39,7 @@ pipeline {
         }
         stage('run the jar file in deployenvironment'){
             steps {
-                sh'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62 java - jar /home/ubuntu/*.jar'
+                sh'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62 java -jar /home/ubuntu/*.jar'
             }
         } 
    
