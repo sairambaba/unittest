@@ -31,7 +31,19 @@ pipeline {
             steps {
                 junit 'target/surefire-reports/TEST-*.xml'
             }
+        }
+        stage('copy to jar file in to deployenvironment'){
+            steps {
+                sh'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62:/home/ubuntu'
+            }
+        }
+        stage('run the jar file in deployenvironment'){
+            steps {
+                sh'scp -o StrictHostKeyChecking=no target/*.jar ubuntu@172.31.44.62 java - jar /home/ubuntu/*.jar'
+            }
         } 
+   
+  
      /*  stage('Notify'){
             steps {
                 mail bcc: '', body: '''Please check the build "maven project" in Jenkins.
