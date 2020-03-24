@@ -23,14 +23,7 @@
     </dependency>
   </dependencies>
 
-   /*<repositories>
-     <repository>
-     <id>maven-group</id>
-      <url>http://172.31.86.240:8081/repository/group/</url>
-    </repository>
-    </repositories>*/  
-
-   <distributionManagement>
+     <distributionManagement>
         <snapshotRepository>
            <id>nexus-snapshots</id>
            <url>http://172.31.86.240:8081/repository/snapshots/</url>
