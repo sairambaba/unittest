@@ -18,7 +18,13 @@ pipeline {
                 sh "mvn install"
             }  
         }
-        stage('Archive'){
+        stage('Deploy'){
+            steps {
+                sh "mvn deploy"
+            }  
+        }
+
+       /* stage('Archive'){
             steps {
                 archiveArtifacts 'target/*.jar'
             }
@@ -44,8 +50,7 @@ pipeline {
             }
         } 
    
-  
-     /*  stage('Notify'){
+        stage('Notify'){
             steps {
                 mail bcc: '', body: '''Please check the build "maven project" in Jenkins.
 

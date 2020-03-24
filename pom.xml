@@ -22,12 +22,12 @@
     </dependency>
   </dependencies>
 
-     <repositories>
+   /*<repositories>
      <repository>
      <id>maven-group</id>
       <url>http://172.31.86.240:8081/repository/group/</url>
     </repository>
-    </repositories>  
+    </repositories>*/  
 
    <distributionManagement>
         <snapshotRepository>
