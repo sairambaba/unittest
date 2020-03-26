@@ -22,14 +22,13 @@
     </dependency>
   </dependencies>
 
-
    <distributionManagement>
         <snapshotRepository>
-           <id>snapshots</id>
-           <url>http://172.31.87.82:8081/repository/snapshots/</url>
+           <id>nexus-snapshots</id>
+           <url>http://172.31.87.82:8081/repository/snapshot/</url>
         </snapshotRepository>
         <repository>
-           <id>release</id>
+           <id>nexus-releases</id>
            <url>http://172.31.87.82:8081/repository/release/</url>
         </repository>
      </distributionManagement>
