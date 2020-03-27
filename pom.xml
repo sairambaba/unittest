@@ -6,7 +6,6 @@
   <version>0.0.1</version>
   <packaging>jar</packaging>
   <name>simplemaven</name>
-
   <url>http://maven.apache.org</url>
   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,11 +24,11 @@
 
    <distributionManagement>
         <snapshotRepository>
-           <id>nexus</id>
+           <id>nexus-snapshots</id>
            <url>http://172.31.40.136:8081/repository/snapshot/</url>
         </snapshotRepository>
         <repository>
-           <id>nexus</id>
+           <id>nexus-releases</id>
            <url>http://172.31.40.136:8081/repository/release/</url>
         </repository>
      </distributionManagement>
