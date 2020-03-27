@@ -22,13 +22,6 @@
     </dependency>
   </dependencies>
 
-   <repositories>
-    <repository>
-      <id>group</id>
-      <url>http://172.31.91.31:8081/repository/group/</url>
-    </repository>
-  </repositories>
-
    <distributionManagement>
         <snapshotRepository>
            <id>nexus-snapshots</id>
