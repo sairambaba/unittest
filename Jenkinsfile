@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                sh "mvn clean"
+                sh "mvn clean deploy"
             }
         }
        /* stage('Compile') {
@@ -17,12 +17,12 @@ pipeline {
             steps {
                 sh "mvn package"
             }
-        }*/
+        }
         stage('Deploy'){
             steps {
                 sh "mvn deploy"
             }  
-        }
+        }*/
 
        /* stage('Archive'){
             steps {
