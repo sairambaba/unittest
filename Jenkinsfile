@@ -4,6 +4,7 @@ pipeline {
 options {
   buildDiscarder logRotator(daysToKeepStr: '1', numToKeepStr: '1')
 }
+
     stages {
         stage('Clean') {
             steps {
