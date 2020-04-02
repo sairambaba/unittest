@@ -8,7 +8,7 @@ options {
     stages {
         stage('Clean') {
             steps {
-                sh "mvn clean deploy"
+                sh "mvn clean"
             }
         }
         stage('Compile') {
