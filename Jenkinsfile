@@ -1,14 +1,16 @@
 pipeline {
     agent any
 
-
+options {
+  buildDiscarder logRotator(daysToKeepStr: '1', numToKeepStr: '1')
+}
     stages {
         stage('Clean') {
             steps {
                 sh "mvn clean deploy"
             }
         }
-       /* stage('Compile') {
+        stage('Compile') {
             steps {
                 sh "mvn compile"
             }
@@ -18,6 +20,21 @@ pipeline {
                 sh "mvn package"
             }
         }
+       /* stage('Build docker image'){
+            steps {
+                sh "docker build -t reddemma/image:2.0.0"
+            }  
+        }
+        stage('Push  docker image'){
+            steps {
+                withCredentials([string(credentialsId: 'dockerpwd', variable: 'DockerHubPWD')]) {
+                sh "docker login -u reddemm -p ${DockerHubPWD}"
+            }
+                sh "docker build -t reddemma/image:2.0.0"
+            }  
+        }
+
+
         stage('Deploy'){
             steps {
                 sh "mvn deploy"
