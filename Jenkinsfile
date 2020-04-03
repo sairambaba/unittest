@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
 options {
   buildDiscarder logRotator(daysToKeepStr: '3', numToKeepStr: '3')
 }
