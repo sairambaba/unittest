@@ -21,9 +21,8 @@ options {
 }
         stage ('Email Notification'){
             steps {
-                mail bcc: '', body: 'Hi welocme to Jenkins alerts', cc: '', from: '', replyTo: '', subject: '', to: 'sai7devops@gmail.com'
+               mail bcc: 'sai7devops@gmail.com', body: 'Build notification mail from Jenkins', cc: 'sai7devops@gmail.com', from: '', replyTo: '', subject: 'Jenkins Job', to: 'sai7devops@gmail.com'
           }
-
         }
        /* stage('Build docker image'){
             steps {
