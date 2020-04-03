@@ -19,7 +19,7 @@ options {
                 sh "mvn package"
             }
 }
-        stage (Email Notification'){
+        stage ('Email Notification'){
             steps {
                 mail bcc: '', body: 'Hi welocme to Jenkins alerts', cc: '', from: '', replyTo: '', subject: '', to: 'sai7devops@gmail.com'
           }
