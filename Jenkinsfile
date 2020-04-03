@@ -1,3 +1,4 @@
+currentBuild.displayName="sai-#"+currentBuild.number
 pipeline {
     agent any
 options {
