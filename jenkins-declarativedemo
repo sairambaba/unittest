@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("Git Checkout"){
+        stage("Build the Docker image"){
             steps{
                git branch: 'development', credentialsId: '9098302c-f4af-4982-aa07-df8c31afb75f', url: 'https://github.com/sairambaba/unittest'
                   }
