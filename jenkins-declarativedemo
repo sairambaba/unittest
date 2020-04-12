@@ -4,13 +4,13 @@ pipeline {
        Docker_tag= getDockerTag()
       } 
     stages{
-        stage("Build the Docker image"){
+        stage('Build the Docker image'){
             steps{
                sh "docker build . -t reddemma/image/:${Docker_tag}"
                   }
             }
     }
-
+}
  def getDockerTag(){
   def tag= sh (script: 'git rev-parse Head', returnStdout: true)
   return tag     
