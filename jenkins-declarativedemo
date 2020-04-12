@@ -1,10 +1,17 @@
 pipeline{
     agent any
+    environment{
+       Docker_tag= getDockerTag()
+      } 
     stages{
         stage("Build the Docker image"){
             steps{
-               git branch: 'development', credentialsId: '9098302c-f4af-4982-aa07-df8c31afb75f', url: 'https://github.com/sairambaba/unittest'
+               sh "docker build . -t reddemma/image/:${Docker_tag}"
                   }
             }
     }
+
+ def getDockerTag(){
+  def tag= sh (script: 'git rev-parse Head', returnStdout: true)
+  return tag     
 }
