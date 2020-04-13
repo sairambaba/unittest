@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage('Build the Docker image'){
             steps{
-               sh "docker build . -t reddemma/image/:${Docker_tag}"
+               sh "docker build . -t reddemma/image:${Docker_tag}"
                   }
             }
     }
