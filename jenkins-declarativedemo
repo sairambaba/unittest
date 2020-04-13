@@ -18,7 +18,8 @@ pipeline {
                sh "docker push reddemma/image:${Docker_tag}"
                     }                 
                   }
-                  }
+}
+     }
  }
  def getDockerTag(){
   def tag= sh (script: 'git rev-parse HEAD', returnStdout: true)
