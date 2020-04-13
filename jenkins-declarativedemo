@@ -6,13 +6,13 @@ pipeline {
     stages{
         stage('Build the Docker image'){
             steps{
-               comment "prefix docker hub username to image"  
+#               prefix docker hub username to image  
                sh "docker build . -t reddemma/image:${Docker_tag}"
                   }
             }
         stage('Push the Image to Docker Hub'){
             steps{
-               comment "Authenticating to docker hub in order to  push images"
+#               Authenticating to docker hub in order to  push images
               withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerhubpwd')]) {
                sh "docker login -u reddemma -p ${dockerhubpwd}"
                sh "docker push reddemma/image:${Docker_tag}"
