@@ -1,3 +1,3 @@
-FROM tomcat:8
-
-Copy target/*.jar
+FROM scratch
+ADD hello/
+CMD ["/hello"]
